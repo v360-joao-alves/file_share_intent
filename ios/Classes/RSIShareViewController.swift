@@ -42,11 +42,15 @@ open class RSIBaseShareViewController: UIViewController {
         if showUI {
             setupUI()
         }
-        
-        // Process attachments immediately
-        processAttachments()
     }
-    
+
+	open override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated);
+
+		// Process attachments immediately
+		processAttachments()
+	}
+
     private func setupUI() {
         if #available(iOS 13.0, *) {
             view.backgroundColor = UIColor.systemBackground

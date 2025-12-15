@@ -1,3 +1,6 @@
+## 3.0.2
+- Merged PR #3 to fix locked sharing app
+
 ## 3.0.1
 - Fix compilation issues
 - Add Swift compilation test

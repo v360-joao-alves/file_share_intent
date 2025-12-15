@@ -1,3 +1,19 @@
+## 3.0.3
+### Problem
+
+Since Xcode 16, the Share Extension fails to build with:
+
+```
+fatal error: 'Flutter/Flutter.h' file not found
+```
+
+This happens because the `file_share_intent` module's umbrella header includes Flutter-dependent code, but Share Extensions cannot link against Flutter.
+
+### Solution
+
+Create a separate sub-pod (`file_share_intent_models`) that contains only the Share Extension classes without any Flutter dependency.
+
+
 ## 3.0.2
 - Merged PR #3 to fix locked sharing app
 

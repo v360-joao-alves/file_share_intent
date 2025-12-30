@@ -30,8 +30,6 @@ flutter:
       android:
         package: com.walter.file_share_intent
         pluginClass: FileShareIntentPlugin
-      ios:
-        pluginClass: ListenSharingIntentPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
